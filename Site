@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <title>Barbearia Elite Azul</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Ícones -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background: #f4f8ff;
+      color: #222;
+    }
+
+    header {
+      background: linear-gradient(135deg, #0057ff, #0039a6);
+      color: white;
+      padding: 80px 20px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      animation: fadeDown 1s ease;
+    }
+
+    header p {
+      margin-top: 15px;
+      font-size: 1.2rem;
+      opacity: 0.9;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 15px 30px;
+      background: white;
+      color: #0057ff;
+      border-radius: 50px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: 0.4s;
+    }
+
+    .btn:hover {
+      transform: scale(1.08);
+      background: #e6eeff;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .info {
+      text-align: center;
+    }
+
+    .info h2 {
+      color: #0057ff;
+      margin-bottom: 15px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 40px;
+    }
+
+    .card {
+      background: white;
+      padding: 30px;
+      border-radius: 20px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      transition: 0.4s;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+    }
+
+    .card i {
+      font-size: 40px;
+      color: #0057ff;
+      margin-bottom: 15px;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+      gap: 15px;
+      margin-top: 40px;
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 15px;
+      transition: 0.4s;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    .prices {
+      display: none;
+      margin-top: 30px;
+      animation: fadeUp 0.6s ease;
+    }
+
+    .prices ul {
+      list-style: none;
+      background: white;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+
+    .prices li {
+      padding: 10px 0;
+      border-bottom: 1px solid #ddd;
+      font-weight: bold;
+    }
+
+    .assistant {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      background: #0057ff;
+      color: white;
+      width: 65px;
+      height: 65px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 28px;
+      cursor: pointer;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+      animation: pulse 2s infinite;
+    }
+
+    footer {
+      background: #0039a6;
+      color: white;
+      text-align: center;
+      padding: 30px;
+      margin-top: 60px;
+    }
+
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(0,87,255,0.6); }
+      70% { box-shadow: 0 0 0 25px rgba(0,87,255,0); }
+      100% { box-shadow: 0 0 0 0 rgba(0,87,255,0); }
+    }
+
+    @keyframes fadeDown {
+      from { opacity: 0; transform: translateY(-40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>Barbearia Elite Azul</h1>
+  <p>A melhor barbearia da região – estilo, atitude e confiança</p>
+  <a href="#precos" class="btn">Ver Preços</a>
+</header>
+
+<section class="info">
+  <h2>Por que escolher a nossa barbearia?</h2>
+  <p>Atendimento profissional, cortes modernos e ambiente premium.</p>
+
+  <div class="cards">
+    <div class="card">
+      <i class="fas fa-cut"></i>
+      <h3>Cortes Modernos</h3>
+      <p>Especialistas em todos os estilos masculinos.</p>
+    </div>
+
+    <div class="card">
+      <i class="fas fa-star"></i>
+      <h3>Referência na Região</h3>
+      <p>Reconhecida como a melhor barbearia local.</p>
+    </div>
+
+    <div class="card">
+      <i class="fas fa-user-tie"></i>
+      <h3>Profissionais Qualificados</h3>
+      <p>Equipe experiente e atendimento premium.</p>
+    </div>
+  </div>
+
+  <div class="gallery">
+    <img src="https://i.imgur.com/JYUbZzP.jpg">
+    <img src="https://i.imgur.com/4YQZ6dB.jpg">
+    <img src="https://i.imgur.com/5Ck5MRe.jpg">
+    <img src="https://i.imgur.com/4R1cQ2y.jpg">
+  </div>
+
+  <div id="precos" style="margin-top:40px;">
+    <a class="btn" onclick="mostrarPrecos()">Tabela de Preços</a>
+
+    <div class="prices" id="tabela">
+      <ul>
+        <li>Careca – 20MT / 15</li>
+        <li>Normal – 20MT</li>
+        <li>Francês – 30MT</li>
+        <li>Barba – 10MT</li>
+        <li>E muito mais...</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<div class="assistant" onclick="alert('Olá! Como posso ajudar no seu atendimento?')">
+  <i class="fas fa-headset"></i>
+</div>
+
+<footer>
+  <p>© 2025 Barbearia Elite Azul | Atendimento de excelência</p>
+</footer>
+
+<script>
+  function mostrarPrecos() {
+    const tabela = document.getElementById("tabela");
+    tabela.style.display = tabela.style.display === "block" ? "none" : "block";
+  }
+</script>
+
+</body>
+</html>
